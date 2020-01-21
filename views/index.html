@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <title>@11</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon_at11.ico" />
+    <meta name="description" content="Obedové menu pri ERNI SK">
+    <script type="text/javascript">
+        var sdkInstance="appInsightsSDK";window[sdkInstance]="appInsights";var aiName=window[sdkInstance],aisdk=window[aiName]||function(e){function n(e){t[e]=function(){var n=arguments;t.queue.push(function(){t[e].apply(t,n)})}}var t={config:e};t.initialize=!0;var i=document,a=window;setTimeout(function(){var n=i.createElement("script");n.src=e.url||"https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",i.getElementsByTagName("script")[0].parentNode.appendChild(n)});try{t.cookie=i.cookie}catch(e){}t.queue=[],t.version=2;for(var r=["Event","PageView","Exception","Trace","DependencyData","Metric","PageViewPerformance"];r.length;)n("track"+r.pop());n("startTrackPage"),n("stopTrackPage");var s="Track"+r[0];if(n("start"+s),n("stop"+s),n("addTelemetryInitializer"),n("setAuthenticatedUserContext"),n("clearAuthenticatedUserContext"),n("flush"),t.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4},!(!0===e.disableExceptionTracking||e.extensionConfig&&e.extensionConfig.ApplicationInsightsAnalytics&&!0===e.extensionConfig.ApplicationInsightsAnalytics.disableExceptionTracking)){n("_"+(r="onerror"));var o=a[r];a[r]=function(e,n,i,a,s){var c=o&&o(e,n,i,a,s);return!0!==c&&t["_"+r]({message:e,url:n,lineNumber:i,columnNumber:a,error:s}),c},e.autoExceptionInstrumented=!0}return t}(
+        {
+          instrumentationKey:"aa2cd664-f5de-4e6a-ac99-cebb7f88ddfa"
+        }
+        );window[aiName]=aisdk,aisdk.queue&&0===aisdk.queue.length&&aisdk.trackPageView({});
+    </script>
+    <link href="css/css3timepiece-at11.css" type="text/css"  rel="stylesheet" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/script.js"></script>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="clock" height="350px" width="350px" alt="clock" >
+            {{> at11clock}}
+        </div>
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="clear-fix">
+                <div id="main-logo">
+                    <a href="/">
+                        <img src="img/at11_logo.png" alt="@11 logo">
+                    </a>
+                    <a href="https://www.betterask.erni/">
+                        <img src="img/erni_logo.png" alt="ERNI logo">
+                    </a>
+                </div>
+
+                <div class="col-xs-3 col-md-4 first-row">
+                    <h3 id="date"></h3>
+                </div>
+
+                <div id="denne-menu" class="col-xs-4 col-md-3 first-row">
+                    <h1>Denné menu</h1>
+                </div>
+
+                <div class="col-xs-1 visible-xs">
+                </div>
+            </div>
+
+            <div id="selection">
+                <ul id="restauracie" class="nav nav-pills pull-right">
+                    <li class="label">
+                        <a id="selectRestaurant" role="button" data-toggle="dropdown" href="#" class="second-row-button">Vybrať reštauráciu
+                            <b class="caret"></b>
+                        </a>
+                        <ul id="selectrestaurants" class="dropdown" role="menu" aria-labelledby="selectrestaurants">
+                            <li role="presentation" class="dropdown-checkbox">
+                                {{> selectrestaurants}}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="container">
+            {{#each restaurants}}
+            <section data-restaurant-id="{{this.id}}">
+                <h2><a href="{{this.url}}" target="_blank">{{this.name}}</a></h2>
+					<div class="loader"></div>
+            </section>
+            {{/each}}
+        </div>
+    </main>
+
+    <footer>
+        <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation" style="font-size: 15px;">
+            <div class="container-fluid">
+                <div class="row well" style="margin-bottom: 0px;">
+                    <div class="col-xs-6">
+                        <a href="http://en.wikipedia.org/wiki/Copyleft" target="_blank" title="copyleft"
+                            style="display: inline; -webkit-transform: scaleX(-1); transform: scaleX(-1);">©</a>
+                        ALL WRONGS RESERVED
+                    </div>
+                    <div class="col-xs-1 col-xs-offset-5">
+                        <a style="float: right" href="https://github.com/ERNICommunity/at11" target="_blank"
+                            class="github">GitHub</a>
+                    </div>
+                    <p>
+                        Powered by ERNI Community &#149; Biggest thank to Jano &#149; Designed by Diana
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.5/masonry.pkgd.min.js"></script>
+</body>
+
+</html>

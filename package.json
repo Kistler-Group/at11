@@ -1,0 +1,84 @@
+{
+  "name": "at11",
+  "description": "Daily lunch menu application",
+  "version": "2.0.0",
+  "dependencies": {
+    "applicationinsights": "^1.6.0",
+    "charset": "^1.0.1",
+    "cheerio": "^0.22.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.0",
+    "iconv-lite": "^0.5.0",
+    "moment-timezone": "^0.5.27",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@types/charset": "^1.0.1",
+    "@types/cheerio": "^0.22.15",
+    "@types/express": "^4.17.2",
+    "@types/hbs": "^4.0.1",
+    "@types/mocha": "^5.2.7",
+    "@types/moment-timezone": "^0.5.12",
+    "@types/node": "^13.1.7",
+    "@types/request": "^2.48.4",
+    "mocha": "^7.0.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4",
+    "typescript-tslint-plugin": "^0.5.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "pretest": "tslint -p ./tsconfig.json",
+    "test": "mocha ./dist/test --exit"
+  },
+  "author": {
+    "name": "Jakub Šturc",
+    "email": "jakub.sturc@erni.sk"
+  },
+  "contributors": [
+    {
+      "name": "Ján Neščivera",
+      "email": "jan.nescivera@erni.sk"
+    },
+    {
+      "name": "Matúš Brliť",
+      "email": "matus.brlit@erni.sk"
+    },
+    {
+      "name": "Peter Matejka",
+      "email": "peter.matejka@erni.sk"
+    },
+    {
+      "name": "Andrej Mandli",
+      "email": "andrej.mandli@erni.sk"
+    },
+    {
+      "name": "Marek Linka",
+      "email": "marek.linka@erni.sk"
+    },
+    {
+      "name": "Milos Karas",
+      "email": "caesar1987@centrum.sk"
+    }
+  ],
+  "keywords": [
+    "lunch",
+    "menu",
+    "at11",
+    "erni",
+    "obed"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/at11/at11.git"
+  },
+  "bugs": {
+    "url": "https://github.com/at11/at11/issues"
+  },
+  "engines": {
+    "node": "10.16.x"
+  },
+  "license": "Unlicense",
+  "main": "app.js"
+}
